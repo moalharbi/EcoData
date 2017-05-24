@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_search_location"
+            android:icon="@drawable/ic_menu_search_location"
+            android:title="Search By Location" />
+        <item
+            android:id="@+id/nav_search_boundry"
+            android:icon="@drawable/ic_menu_search_boundry"
+            android:title="Search By Spatial Boundary " />
+        <item
+            android:id="@+id/nav_search_data_text"
+            android:icon="@drawable/ic_menu_search_boundry"
+            android:title="Search By Text " />
+        <item
+            android:id="@+id/nav_search_states"
+            android:icon="@drawable/ic_menu_search_boundry"
+            android:title="Search By State" />
+
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_menu_about_us"
+            android:title="Info" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_menu_about_us"
+            android:title="About Us" />
+
+    </group>
+</menu>

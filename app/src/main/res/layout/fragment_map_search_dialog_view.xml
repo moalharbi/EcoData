@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/delete_sign"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#FFF"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Search"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/formlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        app:layout_marginLeftPercent="10%"
+        app:layout_marginRightPercent="10%"
+        android:animateLayoutChanges="true"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/addline1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:hint="Title"
+            android:background="@drawable/color_edittext_states"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/on_boarding_form_text"
+            android:textCursorDrawable="@drawable/edittext_cursor_member_reg"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advance"/>
+
+        <Spinner
+            android:id="@+id/spinner_states"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/addline2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/rounded_edittext_states"
+            android:gravity="top"
+            android:hint="Remarks"
+            android:inputType="text"
+            android:padding="10dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/on_boarding_form_text"
+            android:textCursorDrawable="@drawable/edittext_cursor_member_reg"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/nextbutton"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/next_button_single"
+            android:gravity="center"
+            android:text="Search"
+            android:layout_below="@id/formlayout"
+            app:layout_marginLeftPercent="10%"
+            app:layout_marginRightPercent="10%"
+            android:layout_marginBottom="16dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+
+
+
+</android.support.percent.PercentRelativeLayout>
+
