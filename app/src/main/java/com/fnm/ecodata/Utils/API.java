@@ -9,7 +9,7 @@ import com.fnm.ecodata.R;
 // This class will be used to access to all the Urls using by this app
 public class API {
     public static String getPlantAndAnimalMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3Averte*+OR+subject_value_resolved%3Ainverte*+OR+subject_value_resolved%3Afauna+OR+subject_value_resolved%3Aanimal+OR+subject_value_resolved%3Aflora+OR+subject_value_resolved%3Aplant+OR+subject_value_resolved%3Aspecies+OR+subject_value_resolved%3Abiota+OR+subject_value_resolved%3Abiodiversity)&rows=999&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3Averte*+OR+subject_value_resolved%3Ainverte*+OR+subject_value_resolved%3Afauna+OR+subject_value_resolved%3Aanimal+OR+subject_value_resolved%3Aflora+OR+subject_value_resolved%3Aplant+OR+subject_value_resolved%3Aspecies+OR+subject_value_resolved%3Abiota+OR+subject_value_resolved%3Abiodiversity)&rows=999&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
     public static String getPlantAndAnimalMarkerNewInfo(int start) {
@@ -18,7 +18,7 @@ public class API {
 
 
     public static String getVegetationMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3Avegetation+OR+subject_value_resolved%3Arevegetation+OR+subject_value_resolved%3Abiomass+OR+subject_value_resolved%3Acanopy+OR+subject_value_resolved%3Areforestation+OR+subject_value_resolved%3Acarbon+OR+subject_value_resolved%3A22tree+ring*22)&rows=999&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3Avegetation+OR+subject_value_resolved%3Arevegetation+OR+subject_value_resolved%3Abiomass+OR+subject_value_resolved%3Acanopy+OR+subject_value_resolved%3Areforestation+OR+subject_value_resolved%3Acarbon+OR+subject_value_resolved%3A22tree+ring*22)&rows=999&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
     public static String getVegetationMarkerNewInfo(int start) {
@@ -26,7 +26,7 @@ public class API {
     }
 
     public static String getTerrestrialMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3Aterrestrial+OR+subject_value_resolved%3Aecosystem+OR+subject_value_resolved%3Awetlands+OR+subject_value_resolved%3Agrass*+OR+subject_value_resolved%3Aforest+OR+subject_value_resolved%3Ahabitat+OR+subject_value_resolved%3Aland+OR+subject_value_resolved%3Adesert+OR+subject_value_resolved%3Aislands+OR+subject_value_resolved%3Asavannas)&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search&rows=999";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3Aterrestrial+OR+subject_value_resolved%3Aecosystem+OR+subject_value_resolved%3Awetlands+OR+subject_value_resolved%3Agrass*+OR+subject_value_resolved%3Aforest+OR+subject_value_resolved%3Ahabitat+OR+subject_value_resolved%3Aland+OR+subject_value_resolved%3Adesert+OR+subject_value_resolved%3Aislands+OR+subject_value_resolved%3Asavannas)&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights&rows=999";
     }
 
 
@@ -35,7 +35,7 @@ public class API {
     }
 
     public static String getFreshWaterMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*22fresh+water22*+OR+subject_value_resolved%3A*freshwater*+OR+subject_value_resolved%3A*estuarine*+OR+subject_value_resolved%3A*riparian*+OR+subject_value_resolved%3A*hydro*+OR+subject_value_resolved%3A*22surface+water22*+OR+subject_value_resolved%3A*22ground+water22*+OR+subject_value_resolved%3A*22water+quality22*+OR+subject_value_resolved%3A*creek*+OR+subject_value_resolved%3Ariver*+OR+subject_value_resolved%3Astream*+OR+subject_value_resolved%3Alake*+OR+subject_value_resolved%3Aflood*+OR+subject_value_resolved%3Aflow*+OR+subject_value_resolved%3Aglacier*+OR+subject_value_resolved%3Asnow+OR+subject_value_resolved%3Aice)&rows=999&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*22fresh+water22*+OR+subject_value_resolved%3A*freshwater*+OR+subject_value_resolved%3A*estuarine*+OR+subject_value_resolved%3A*riparian*+OR+subject_value_resolved%3A*hydro*+OR+subject_value_resolved%3A*22surface+water22*+OR+subject_value_resolved%3A*22ground+water22*+OR+subject_value_resolved%3A*22water+quality22*+OR+subject_value_resolved%3A*creek*+OR+subject_value_resolved%3Ariver*+OR+subject_value_resolved%3Astream*+OR+subject_value_resolved%3Alake*+OR+subject_value_resolved%3Aflood*+OR+subject_value_resolved%3Aflow*+OR+subject_value_resolved%3Aglacier*+OR+subject_value_resolved%3Asnow+OR+subject_value_resolved%3Aice)&rows=999&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
     public static String getFreshWaterMarkerNewInfo(int start) {
@@ -43,7 +43,7 @@ public class API {
     }
 
     public static String getAgricultureMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=%0A(subject_value_resolved%3A*agricultur*+OR+subject_value_resolved%3A*farm*+OR+subject_value_resolved%3A*pastoral*+OR+subject_value_resolved%3A*pastur*+OR+subject_value_resolved%3A*graz*+OR+subject_value_resolved%3Acrop*+OR+subject_value_resolved%3A*irrigation*+OR+subject_value_resolved%3A*conserv*+OR+subject_value_resolved%3A*manage*)%0A&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=%0A(subject_value_resolved%3A*agricultur*+OR+subject_value_resolved%3A*farm*+OR+subject_value_resolved%3A*pastoral*+OR+subject_value_resolved%3A*pastur*+OR+subject_value_resolved%3A*graz*+OR+subject_value_resolved%3Acrop*+OR+subject_value_resolved%3A*irrigation*+OR+subject_value_resolved%3A*conserv*+OR+subject_value_resolved%3A*manage*)%0A&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
     public static String getAgricultureMarkerNewInfo(int start) {
@@ -51,7 +51,7 @@ public class API {
     }
 
     public static String getLandsurfaceAndSoilMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*22land+surface22*+OR+subject_value_resolved%3A*soil*+OR+subject_value_resolved%3Aerosion+OR+subject_value_resolved%3Asedimen*+OR+subject_value_resolved%3Aland*+OR+subject_value_resolved%3Atopography+OR+subject_value_resolved%3A22frozen+OR+subject_value_resolved%3Aland22+OR+subject_value_resolved%3A22soil+OR+subject_value_resolved%3Asalinity22)&rows=999&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*22land+surface22*+OR+subject_value_resolved%3A*soil*+OR+subject_value_resolved%3Aerosion+OR+subject_value_resolved%3Asedimen*+OR+subject_value_resolved%3Aland*+OR+subject_value_resolved%3Atopography+OR+subject_value_resolved%3A22frozen+OR+subject_value_resolved%3Aland22+OR+subject_value_resolved%3A22soil+OR+subject_value_resolved%3Asalinity22)&rows=999&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
     public static String getLandsurfaceAndSoilMarkerNewInfo(int start) {
@@ -61,7 +61,7 @@ public class API {
 
 
     public static String getOceanCostMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*coast*+OR+subject_value_resolved%3A*ocean*+OR+subject_value_resolved%3Amarine+OR+subject_value_resolved%3Abeach+OR+subject_value_resolved%3Abathmetry+OR+subject_value_resolved%3Atide*+OR+subject_value_resolved%3Aaqua*+OR+subject_value_resolved%3Asea*+OR+subject_value_resolved%3Asaltwa*+OR+subject_value_resolved%3Astorm+OR+subject_value_resolved%3Ashoreline+OR+subject_value_resolved%3Awave*+OR+subject_value_resolved%3Asalinity)&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*coast*+OR+subject_value_resolved%3A*ocean*+OR+subject_value_resolved%3Amarine+OR+subject_value_resolved%3Abeach+OR+subject_value_resolved%3Abathmetry+OR+subject_value_resolved%3Atide*+OR+subject_value_resolved%3Aaqua*+OR+subject_value_resolved%3Asea*+OR+subject_value_resolved%3Asaltwa*+OR+subject_value_resolved%3Astorm+OR+subject_value_resolved%3Ashoreline+OR+subject_value_resolved%3Awave*+OR+subject_value_resolved%3Asalinity)&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
     public static String getOceanCostMarkerNewInfo(int start) {
@@ -69,7 +69,7 @@ public class API {
     }
 
     public static String getClimateMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*climate*+OR+subject_value_resolved%3Aindex*+OR+subject_value_resolved%3A*indice*+OR+subject_value_resolved%3A*anomaly*+OR+subject_value_resolved%3A*oscillation*+OR+subject_value_resolved%3A*pattern*)&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*climate*+OR+subject_value_resolved%3Aindex*+OR+subject_value_resolved%3A*indice*+OR+subject_value_resolved%3A*anomaly*+OR+subject_value_resolved%3A*oscillation*+OR+subject_value_resolved%3A*pattern*)&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
     public static String getClimateMarkerNewInfo(int start) {
@@ -77,7 +77,7 @@ public class API {
     }
 
     public static String getHumanNatureMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*human*+OR+subject_value_resolved%3A22human+impact22+OR+subject_value_resolved%3Asurvey+OR+subject_value_resolved%3Aboundaries+OR+subject_value_resolved%3Aeconomi*+OR+subject_value_resolved%3Aproductio*+OR+subject_value_resolved%3Abehav*+OR+subject_value_resolved%3Ainfrastructure+OR+subject_value_resolved%3A22land+management22+OR+subject_value_resolved%3Aharzard*)&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*human*+OR+subject_value_resolved%3A22human+impact22+OR+subject_value_resolved%3Asurvey+OR+subject_value_resolved%3Aboundaries+OR+subject_value_resolved%3Aeconomi*+OR+subject_value_resolved%3Aproductio*+OR+subject_value_resolved%3Abehav*+OR+subject_value_resolved%3Ainfrastructure+OR+subject_value_resolved%3A22land+management22+OR+subject_value_resolved%3Aharzard*)&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
     public static String getHumanNatureMarkerNewInfo(int start) {
@@ -85,7 +85,7 @@ public class API {
     }
 
     public static String getEnergyWaterGasMarkerInfo() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*energy*+OR+subject_value_resolved%3Agas*+OR+subject_value_resolved%3Aflux*+OR+subject_value_resolved%3Aatmospher*+OR+subject_value_resolved%3Acloud*+OR+subject_value_resolved%3Aair*+OR+subject_value_resolved%3APheno*+OR+subject_value_resolved%3Aradia*+OR+subject_value_resolved%3Avapo*+OR+subject_value_resolved%3Awind*+OR+subject_value_resolved%3Aprecipitation*+OR+subject_value_resolved%3Arain*)&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=(subject_value_resolved%3A*energy*+OR+subject_value_resolved%3Agas*+OR+subject_value_resolved%3Aflux*+OR+subject_value_resolved%3Aatmospher*+OR+subject_value_resolved%3Acloud*+OR+subject_value_resolved%3Aair*+OR+subject_value_resolved%3APheno*+OR+subject_value_resolved%3Aradia*+OR+subject_value_resolved%3Avapo*+OR+subject_value_resolved%3Awind*+OR+subject_value_resolved%3Aprecipitation*+OR+subject_value_resolved%3Arain*)&wt=json&indent=true&rows=999&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
 
@@ -94,7 +94,7 @@ public class API {
     }
 
     public static String urlSearchByText(String query) {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=*%3A*&fq=(subject_value_resolved%3A*"+ query +"*%20OR%20description_value%3A*"+query+"*)&rows=500&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=*%3A*&fq=(subject_value_resolved%3A*"+ query +"*%20OR%20description_value%3A*"+query+"*)&rows=500&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights";
     }
 
     public static String advanceSearch(String preUrl, String query){
@@ -102,7 +102,7 @@ public class API {
     }
 
     public static String urlSearchByLocation() {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=*%3A*&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search&rows=9999";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=*%3A*&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search,access_rights&rows=9999";
     }
 
     public static String getStatesUrl(int start, String stateCode){

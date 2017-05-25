@@ -80,10 +80,12 @@ public class DetailListActivity extends AppCompatActivity implements CategoryLis
         }
 
         TextView title3 = (TextView) dialoglayout.findViewById(R.id.title3);
+        title3.setVisibility(View.GONE);
         title3.setText(R.string.title_access);
         TextView desc3 = (TextView) dialoglayout.findViewById(R.id.title3_desc);
         if(access != null)
         desc3.setText(access.trim());
+        desc3.setVisibility(View.GONE);
 
         final String urlToShare = "http://portal-dev.tern.org.au/" + slug;
 

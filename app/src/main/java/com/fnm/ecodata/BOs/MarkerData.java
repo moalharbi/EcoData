@@ -1,5 +1,7 @@
 package com.fnm.ecodata.BOs;
 
+import com.google.gson.annotations.SerializedName;
+
 import io.realm.Realm;
 import io.realm.RealmObject;
 import io.realm.RealmResults;
@@ -11,7 +13,6 @@ import io.realm.annotations.PrimaryKey;
 
 public class MarkerData  {
 
-
     String id;
     String title;
     String slug;
@@ -20,6 +21,8 @@ public class MarkerData  {
     String[] description_type;
     String[] description_value;
     String[] spatial_coverage_centres;
+    String access_rights;
+
 
     public String getId() {
         return id;
@@ -51,6 +54,14 @@ public class MarkerData  {
 
     public void setSpatial_coverage_centres(String[] spatial_coverage_centres) {
         this.spatial_coverage_centres = spatial_coverage_centres;
+    }
+
+    public String getAccess_rights() {
+        return access_rights;
+    }
+
+    public void setAccess_rights(String access_rights) {
+        this.access_rights = access_rights;
     }
 
     public String getTitle() {

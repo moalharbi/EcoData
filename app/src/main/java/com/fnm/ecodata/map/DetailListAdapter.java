@@ -49,7 +49,7 @@ public class DetailListAdapter extends RecyclerView.Adapter<DetailListViewHolder
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                parentNotifier.showMarkerDetail(dataObj.getTitle(), dataObj.getSnipet(), dataObj.getCitationInfoSearch(), dataObj.getSimplifiedTitle(), dataObj.getSlug());
+                parentNotifier.showMarkerDetail(dataObj.getTitle(), dataObj.getSnipet(), dataObj.getCitationInfoSearch(), dataObj.getAccessRight(), dataObj.getSlug());
             }
         });
     }

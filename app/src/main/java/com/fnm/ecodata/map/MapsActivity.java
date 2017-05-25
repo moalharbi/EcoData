@@ -502,6 +502,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 markerDataRealmBO.setSnipet(snipet);
                 markerDataRealmBO.setUrl(url);
                 markerDataRealmBO.setSlug(data.getSlug());
+                markerDataRealmBO.setAccessRight(data.getAccess_rights());
                 realm.copyToRealmOrUpdate(markerDataRealmBO);
             } else {
             }
@@ -562,6 +563,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 markerDataRealmBO.setSnipet(snipet);
                 markerDataRealmBO.setUrl(url);
                 markerDataRealmBO.setSlug(data.getSlug());
+                markerDataRealmBO.setAccessRight(data.getAccess_rights());
                 realm.copyToRealmOrUpdate(markerDataRealmBO);
 
             } else {
@@ -662,10 +664,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         TextView title3 = (TextView) dialoglayout.findViewById(R.id.title3);
+        title3.setVisibility(View.GONE);
         title3.setText(R.string.title_access);
         TextView desc3 = (TextView) dialoglayout.findViewById(R.id.title3_desc);
         if(access != null)
         desc3.setText(access.trim());
+        desc3.setVisibility(View.GONE);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(title);

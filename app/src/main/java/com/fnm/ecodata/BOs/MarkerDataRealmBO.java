@@ -21,6 +21,7 @@ public class MarkerDataRealmBO extends RealmObject {
     String snipet;
     String citationInfoSearch;
     String simplifiedTitle;
+    String accessRight;
     String url;
 
     public String getId() {
@@ -94,6 +95,14 @@ public class MarkerDataRealmBO extends RealmObject {
 
     public void setSimplifiedTitle(String simplifiedTitle) {
         this.simplifiedTitle = simplifiedTitle;
+    }
+
+    public String getAccessRight() {
+        return accessRight;
+    }
+
+    public void setAccessRight(String accessRight) {
+        this.accessRight = accessRight;
     }
 
     public static MarkerDataRealmBO getMarkerData(Realm realm, String id) {
