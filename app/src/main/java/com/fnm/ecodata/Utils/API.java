@@ -94,7 +94,7 @@ public class API {
     }
 
     public static String urlSearchByText(String query) {
-        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=*%3A*&fq=(subject_value_resolved%3A*"+ query +"*%20OR%20description_value%3A*"+query+"*)&rows=500&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title";
+        return "http://portal-dev.tern.org.au:8983/solr/tddp/select?q=*%3A*&fq=(subject_value_resolved%3A*"+ query +"*%20OR%20description_value%3A*"+query+"*)&rows=500&wt=json&indent=true&fl=id,spatial_coverage_centres,description_type,description_value,slug,title,simplified_title,citation_info_search";
     }
 
     public static String advanceSearch(String preUrl, String query){
