@@ -219,5 +219,5 @@
         <item>Human - Nature Interaction</item>
         <item>Energy, Water And Gas</item>
     </string-array>
-    <string name="title_activity_detail_list">Details</string>
+    <string name="title_activity_detail_list">Results</string>
 </resources>
