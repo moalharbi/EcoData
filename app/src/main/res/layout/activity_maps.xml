@@ -22,7 +22,7 @@
         android:text="Downloading..."/>
     <Button
         android:layout_marginTop="10dp"
-        android:text="Details"
+        android:text="Results"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
