@@ -1,7 +1,9 @@
 package com.fnm.ecodata;
 
+import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,9 +15,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -138,8 +144,10 @@ public class MainActivity extends AppCompatActivity
             showSearchResult("SearchText");
         } else if(id == R.id.nav_search_states){
             showSearchResult("SearchStates");
-        }else if (id == R.id.nav_about_us) {
+        } else if (id == R.id.nav_about_us) {
             gotoAboutActivity();
+        } else if (id == R.id.nav_info) {
+            showInfo();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -147,8 +155,12 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-
     private void gotoAboutActivity(){
+        Intent intent = new Intent(this, AboutusActivity.class);
+        startActivity(intent);
+    }
+
+    private void gotoInfoActivity(){
         Intent intent = new Intent(this, AboutusActivity.class);
         startActivity(intent);
     }
@@ -169,6 +181,56 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void showMarkerDetail(String title, String description, String citation, String access, String slug) {
 
+    }
+
+    private void showInfo() {
+        LayoutInflater inflater = getLayoutInflater();
+        View dialoglayout = inflater.inflate(R.layout.detail_dialog_view, null);
+        TextView title1 = (TextView) dialoglayout.findViewById(R.id.title1);
+        title1.setText(R.string.title_desc);
+        title1.setVisibility(View.GONE);
+        TextView desc1 = (TextView) dialoglayout.findViewById(R.id.title1_desc);
+
+            desc1.setText("This app is developed by Mohammed ALHARBI\n" +
+                    "Master of Computer Science at University of Queensland,\n" +
+                    "\n" +
+                    "Supervised by Dr. Siddeswara Guru\n" +
+                    "Director Data Science\n" +
+                    "Terrestrial Ecosystem Research Network (TERN)\n" +
+                    "The University of Queensland\n" +
+                    "St Lucia 4072, Australia\n" +
+                    "\n" +
+                    "Copyright  2017");
+
+        TextView title2 = (TextView) dialoglayout.findViewById(R.id.title2);
+        title2.setText(R.string.title_citation);
+        TextView desc2 = (TextView) dialoglayout.findViewById(R.id.title2_desc);
+
+        title2.setVisibility(View.GONE);
+        desc2.setVisibility(View.GONE);
+
+        TextView title3 = (TextView) dialoglayout.findViewById(R.id.title3);
+        title3.setVisibility(View.GONE);
+        title3.setText(R.string.title_access);
+        TextView desc3 = (TextView) dialoglayout.findViewById(R.id.title3_desc);
+
+        desc3.setVisibility(View.GONE);
+
+        title3.setVisibility(View.GONE);
+        desc3.setVisibility(View.GONE);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Info");
+        builder.setView(dialoglayout);
+
+        builder.setPositiveButton(R.string.button_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.show();
     }
 
 }
